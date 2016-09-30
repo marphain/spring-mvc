@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.marphain.demo.springmvc.dao.IHelloDao">
+<resultMap type="com.marphain.demo.springmvc.entity.po.HelloPo" id="BaseResultMap">
+    <id property="id" column="id" jdbcType="INTEGER"/>
+    <result property="description" column="description" jdbcType="VARCHAR"/>
+</resultMap>
+
+<select id="selectPos" parameterType="com.marphain.demo.springmvc.entity.po.HelloPo" resultMap="BaseResultMap">
+    select * from t_hello
+    <where>
+        <if test="id != null">
+            id = #{id}
+        </if>
+    </where>
+</select>
+</mapper>

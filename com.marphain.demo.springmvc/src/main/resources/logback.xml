@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds" debug="false">
+	<property name="logRoot" value="/opt/logs/marphain" />
+	<property name="appName" value="marphain"></property>
+	<contextName>${appName}</contextName>
+
+	<!-- 控制台appender -->
+	<appender name="CONSOLE-APPENDER" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder charset="UTF-8" />
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{36} - %msg%n</Pattern>
+		</layout>
+	</appender>
+
+    <!-- 控制层appender -->
+	<appender name="MARPHAIN-CONTROLLER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder charset="UTF-8" />
+		<file>${logRoot}/controller.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${logRoot}/controller.log.%d{yyyy-MM-dd}</fileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{36} - %msg%n</Pattern>
+		</layout>
+	</appender>
+	<logger name="com.marphain.demo.springmvc.controller" level="DEBUG" additivity="true">
+		<appender-ref ref="MARPHAIN-CONTROLLER" />
+	</logger>
+
+	<!-- root -->
+	<root level="INFO">
+		<appender-ref ref="CONSOLE-APPENDER" />
+	</root>
+</configuration>
