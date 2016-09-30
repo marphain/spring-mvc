@@ -24,7 +24,7 @@ public class HelloController
 	{
 		if (log.isInfoEnabled())
 		{
-			log.info("start to run sayHello()");
+			log.info("start to run sayHello().");
 		}
 		
 		String words = helloService.hello();
