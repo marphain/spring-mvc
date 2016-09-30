@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.marphain</groupId>
+    <artifactId>com.marphain.demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>com.marpahin.demo.tech</artifactId>
+  <name>com.marphain.demo</name>
+  
+  <dependencies>
+      <!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
+      <dependency>
+          <groupId>org.mongodb</groupId>
+          <artifactId>mongo-java-driver</artifactId>
+          <version>3.3.0</version>
+      </dependency>
+      
+      <!-- https://mvnrepository.com/artifact/org.apache.velocity/velocity -->
+	  <dependency>
+	      <groupId>org.apache.velocity</groupId>
+	      <artifactId>velocity</artifactId>
+	      <version>1.7</version>
+	  </dependency>
+	  <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+	  <dependency>
+	      <groupId>redis.clients</groupId>
+	      <artifactId>jedis</artifactId>
+	      <version>2.9.0</version>
+	  </dependency>
+	  
+	  <!-- https://mvnrepository.com/artifact/com.caucho/hessian -->
+	  <dependency>
+		  <groupId>com.caucho</groupId>
+		  <artifactId>hessian</artifactId>
+		  <version>4.0.38</version>
+	  </dependency>
+	  
+      
+  </dependencies>
+</project>
