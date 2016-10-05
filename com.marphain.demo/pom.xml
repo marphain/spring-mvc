@@ -13,6 +13,7 @@
 
 
   	<module>com.marphain.demo.cache</module>
+  	<module>com.marphain.demo.newer</module>
   </modules>
   
   <dependencies>
