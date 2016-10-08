@@ -5,8 +5,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/resouces"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
-        <property name="context-root" value="com.marphain.demo.springmvc"/>
         <property name="java-output-path" value="/com.marphain.demo.springmvc/target/classes"/>
+        <property name="context-root" value="springmvc"/>
     </wb-module>
 </project-modules>
