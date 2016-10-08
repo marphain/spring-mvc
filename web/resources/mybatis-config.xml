@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <!-- 如果配置文件和property标签中的key值相同，则前者覆盖后者 -->
+  <properties resource="/resources/db_config.properties">
+    <property name="encoding" value="UTF-8"/>
+  </properties>
+  
+  <!-- 设置Mybatis运行时行为 -->
+  <settings>
+    <setting name="cacheEnabled" value="true"/>
+    <setting name="lazyLoadingEnabled" value="false" />
+    <setting name="aggressiveLazyLoading" value="true"/>
+    <setting name="multipleResultSetsEnabled" value="true"/>
+    <setting name="useColumnLabel" value="true"/>
+    <setting name="useGeneratedKeys" value="false"/>
+    <setting name="autoMappingBehavior" value="PARTIAL"/>
+    <setting name="autoMappingUnknownColumnBehavior" value="NONE"/>
+    <setting name="defaultExecutorType" value="SIMPLE"/>
+    <setting name="defaultStatementTimeout" value=""/>
+    <setting name="defaultFetchSize" value=""/>
+    <setting name="safeRowBoundsEnabled" value="false"/>
+    <setting name="mapUnderscoreToCamelCase" value="false"/>
+    <setting name="localCacheScope" value="SESSION"/>
+    <setting name="jdbcTypeForNull" value="OTHER"/>
+    <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>
+    <setting name="defaultScriptingLanguage" value="org.apache.ibatis.scripting.xmltags.XMLDynamicLanguageDriver"/>
+    <setting name="callSettersOnNulls" value="false"/>
+    <setting name="logPrefix" value=""/>
+    <setting name="logImpl" value=""/>
+    <setting name="proxyFactory" value="JAVASSIST"/>
+    <setting name="vfsImpl" value=""/>
+  </settings>
+  
+  <!-- 别名 -->
+  <typeAliases>
+    <typeAlias alias="User" type="marphain.web.bean.User"/>
+    <package name="marphain.web.mybatis.model"/>
+  </typeAliases>
+  
+  <!-- 将JDBC Type 转换为java Type -->
+  <typeHandlers>
+    <typeHandler handler="marphain.web.mybatis.typehandler.StringTypeHandler" javaType="String" jdbcType="VARCHAR"/>
+    <package name="marphain.web.mybatis.typehandler"/>
+  </typeHandlers>
+  
+  <!-- 环境配置 -->
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  
+  <!-- 映射文件 -->
+  <mappers>
+    <mapper resource="marphain/web/mybatis/mapper/impl/UserMapper.xml"/>
+    <mapper class="marphain.web.mybatis.mapper.UserMapper"/>
+    <package name="marphain.web.mybatis.mapper.impl"/>
+  </mappers>
+</configuration>
