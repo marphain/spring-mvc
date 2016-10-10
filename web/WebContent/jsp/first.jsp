@@ -2,71 +2,34 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <head>
-<title>DIV+CSS布局</title>
+<title>DIV+CSS布局(盒子模型)</title>
 <link href="/web/css/bootstrap.min.css" rel="stylesheet">
-<script type="text/javascript" src="/web/js/bootstrap.min.js"></script>
+<link href="/web/css/first.css" rel="stylesheet">
 <script type="text/javascript" src="/web/js/jquery-1.12.1.min.js"></script>
-<style type="text/css">
-#container{
-    width: 900px;
-    margin: 0 auto;
-    background: #CF3;
-}
-#header{
-    height: 50px;
-    background: #093;
-}
-#logo{
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-top: 20px;
-}
-#content{
-    height: 600px;
-    margin-top: 20px;
-    background: #0FF;
-}
-#content_left{
-    width: 300px;
-    height: 500px;
-    margin: 20px;
-    float: left;
-    background: #90C;
-}
-#content_main{
-    width: 500px;
-    height: 500px;
-    margin: 20px;
-    float: left;
-    background: #000;
-}
-#footer{
-    height: 50px;
-    margin-top: 20px;
-    background: #90C;    
-}
-#audioId{
-    height: 30px;
-    margin-top: 470px;
-    background: #FFF;
-}
-.clear{
-    clear: both;
-}
-/* body{
-    background: url('/web/img/wutong.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-} */
-</style>
+<script type="text/javascript" src="/web/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div id="container">
     <div id="header">
-        <div id="logo">padding设置内容与边框的距离</div>
+        <div id="logo"><p>padding设置内容与边框的距离</p></div>
     </div>
     <div id="content">
         <div id="content_left">
+            <ul>
+                <li><a href="#">菜单1</a></li>
+                <li><a href="#">菜单2</a></li>
+                <li><a href="#">菜单3</a></li>
+                <li><a href="#">菜单4</a></li>
+                <div class="dropdown">
+                    <a href="#">菜单5</a>
+                    <div class="dropdown-context">
+                        <a href="#" style="display: block;">子菜单1</a>
+                        <a href="#" style="display: block;">子菜单2</a>
+                        <a href="#" style="display: block;">子菜单3</a>
+                    </div>
+                </div>
+                <li><a href="#">菜单6</a></li>
+            </ul>
             <div id="audioId">
                 <audio src="/web/audio/jiujielun.mp3" controls="controls"></audio>
             </div>
