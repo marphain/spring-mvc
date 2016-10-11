@@ -15,7 +15,7 @@
     </div>
     <div id="content">
         <div id="content_left">
-            <ul>
+            <ul class="menu_list">
                 <li><a href="#">菜单1</a></li>
                 <li><a href="#">菜单2</a></li>
                 <li><a href="#">菜单3</a></li>
@@ -29,6 +29,14 @@
                     </div>
                 </div>
                 <li><a href="#">菜单6</a></li>
+            </ul>
+            <ul class="pagination">
+                <li><a href="#">0</a></li>
+                <li><a href="#" class="active">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">6</a></li>
             </ul>
             <div id="audioId">
                 <audio src="/web/audio/jiujielun.mp3" controls="controls"></audio>
