@@ -3,7 +3,7 @@
 <html>
 <head>
 <title>DIV+CSS布局(盒子模型)</title>
-<link href="/web/css/bootstrap.min.css" rel="stylesheet">
+<!-- <link href="/web/css/bootstrap.min.css" rel="stylesheet"> -->
 <link href="/web/css/first.css" rel="stylesheet">
 <script type="text/javascript" src="/web/js/jquery-1.12.1.min.js"></script>
 <script type="text/javascript" src="/web/js/bootstrap.min.js"></script>

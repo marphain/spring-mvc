@@ -5,8 +5,8 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: 950px 800px;
+    /* background-position: left top; */
 }
-
 #container{
     width: 900px;
     margin: 0 auto;
@@ -30,6 +30,9 @@ body{
     overflow: scroll; */
     box-sizing:border-box;
     margin: 0 auto;
+    text-align: center;
+    text-shadow: 2px 2px gray;
+    color: black;
 }
 #content{
     height: 600px;
@@ -53,6 +56,7 @@ ul.menu_list a{
     display: block;
     width: 60px;
     color: red;
+    text-decoration: none;
 }
 .dropdown{
     display: inline-block;
@@ -74,20 +78,22 @@ ul.menu_list a{
 ul.pagination{
 	display: inline-block;
 	padding: 0;
-	margin: 0;
+	margin: 15px;
 }
 ul.pagination li{
 	display: inline;
 }
 ul.pagination li a{
-	background-color: yellow;
 	color: red;
 	float: left;
-	text-decoration: none;
+	margin: 5px;
 	width: 35px;
 	height: 35px;
+	line-height: 35px;
+	text-align: center;
 	border-radius: 50%;
-	margin: 5px;
+	text-decoration: none;
+	background-color: yellow;
 }
 ul.pagination li a.active{
 	background-color: green;
