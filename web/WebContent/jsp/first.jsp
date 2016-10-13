@@ -31,12 +31,12 @@
                 <li><a href="#">菜单6</a></li>
             </ul>
             <ul class="pagination">
-                <li><a href="#">0</a></li>
+                <li><a href="#">《</a></li>
                 <li><a href="#" class="active">1</a></li>
                 <li><a href="#">2</a></li>
                 <li><a href="#">3</a></li>
                 <li><a href="#">4</a></li>
-                <li><a href="#">6</a></li>
+                <li><a href="#">》</a></li>
             </ul>
             <div id="audioId">
                 <audio src="/web/audio/jiujielun.mp3" controls="controls"></audio>
@@ -49,7 +49,7 @@
         </div>
     </div>
     <div class="clear"></div>
-    <div id="footer">footer</div>
+    <div id="footer"><p style="float: right;">footer</p></div>
 </div>
 </body>
 </html>

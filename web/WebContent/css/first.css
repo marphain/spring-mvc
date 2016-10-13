@@ -1,5 +1,7 @@
 @CHARSET "UTF-8";
-
+*{
+	box-sizing: border-box;
+}
 body{
     background: url('/web/img/wutong.jpg');
     background-position: center;
@@ -28,7 +30,6 @@ body{
 #logo p{
 /*     line-height: 40;
     overflow: scroll; */
-    box-sizing:border-box;
     margin: 0 auto;
     text-align: center;
     text-shadow: 2px 2px gray;
