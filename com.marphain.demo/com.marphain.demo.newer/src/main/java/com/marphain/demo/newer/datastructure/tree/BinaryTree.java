@@ -158,6 +158,7 @@ public class BinaryTree<T extends Comparable>
 	}
 	
 	/**
+	 * 先根遍历
 	 * 输出节点数据（先打印根节点，再打印左节点，最后打印右节点）
 	 */
 	public void display()
