@@ -2,7 +2,7 @@ package com.marphain.demo.newer.datastructure.tree;
 
 
 /**
- * 二叉查找树
+ * 二叉查找树(Binary Search Tree)
  * @author lenovo
  *
  * @param <T>
