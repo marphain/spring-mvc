@@ -25,7 +25,7 @@ public class MongoDBTest
 			
 			//获取数据库实例
 			MongoDatabase db = mongo.getDatabase(dbName);
-			
+						
 			//获取集合（表）
 			MongoCollection<Document> collection = db.getCollection(cName);
 			
@@ -34,6 +34,8 @@ public class MongoDBTest
 					.append("age", 20)
 					.append("sex", 1);
 			collection.insertOne(document);
+			
+			//collection.updateOne(Filters.eq("", ""), document);
 			
 			//查询文档信息
 			System.out.println("count:" + collection.count());
