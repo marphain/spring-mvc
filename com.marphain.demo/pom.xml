@@ -12,6 +12,8 @@
   	<module>com.marphain.demo.service</module>
   	<module>com.marphain.demo.cache</module>
   	<module>com.marphain.demo.newer</module>
+  	<module>com.marphain.demo.service.facade</module>
+  	<module>com.marphain.demo.web</module>
   </modules>
   
   <dependencies>
