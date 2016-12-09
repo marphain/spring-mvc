@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.marphain.demo.springmvc.ext.service.IExtHelloService;
 import com.marphain.demo.springmvc.service.IHelloService;
 
 @Controller
@@ -19,6 +20,9 @@ public class HelloController
 	@Resource
 	private IHelloService helloService;
 	
+	@Resource
+	private IExtHelloService extHelloService;
+	
 	@RequestMapping(value = "/sayHello")
 	public String sayHello(Model model)
 	{
@@ -27,9 +31,12 @@ public class HelloController
 			log.info("start to run sayHello().");
 		}
 		
-		String words = helloService.hello();
+//		String words = helloService.hello();
+		
+		String words = extHelloService.sayHello("World");
 		
 		model.addAttribute("context", words);
+		
 		return "hello/sayHello";				
 	}
 }
