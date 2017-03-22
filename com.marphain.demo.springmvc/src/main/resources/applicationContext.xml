@@ -31,4 +31,5 @@
     <bean id="clientHelloFacade" class="com.marphain.demo.service.facade.IHelloFacade" 
         factory-bean="clientFactory" factory-method="create">
     </bean>
+    
 </beans>
