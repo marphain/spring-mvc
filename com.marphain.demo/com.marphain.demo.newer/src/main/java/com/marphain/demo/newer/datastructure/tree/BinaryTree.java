@@ -145,7 +145,7 @@ public class BinaryTree<T extends Comparable>
 			//如果该节点的左右子树都存在，则选择右子树中最小的节点替换该节点,并删除右子树中的最小节点
 			if ((node.leftNode != null) && (node.rightNode != null))
 			{
-				node.data = findMin(node.rightNode).data;
+//				node.data = findMin(node.rightNode).data;
 				node.rightNode = remove(node.data, node.rightNode);
 			}
 			else
