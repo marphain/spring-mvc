@@ -15,7 +15,7 @@ public class AnnotationConfiguration {
     }
 
     @Bean(name = "userBean", initMethod = "init", destroyMethod = "destroy")
-    @Scope("prototype")//作用域默认为单例
+//    @Scope("prototype")//作用域默认为单例
     public UserBean userBean(){
         UserBean userBean = new UserBean();
         userBean.setName("China");

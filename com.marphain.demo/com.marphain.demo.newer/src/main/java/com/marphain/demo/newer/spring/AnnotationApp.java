@@ -5,8 +5,11 @@ import com.marphain.demo.newer.spring.bean.PigBean;
 import com.marphain.demo.newer.spring.bean.UserBean;
 import com.marphain.demo.newer.spring.config.ContextConfiguration;
 import com.marphain.demo.newer.spring.config.form.ScanConfiguration;
+import com.marphain.demo.newer.spring.event.TestEvent;
+import com.marphain.demo.newer.spring.publisher.TestPublisher;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 
 /**
  * 基于注解的ApplicationContext
@@ -26,6 +29,9 @@ public class AnnotationApp {
 
         PigBean pigBean = ctx.getBean("pigBean", PigBean.class);
         System.out.println(pigBean.getHead());
+
+        TestPublisher publisher = ctx.getBean("testPublisher", TestPublisher.class);
+        publisher.onPublishEvent(new TestEvent("event test"));
     }
 
 }

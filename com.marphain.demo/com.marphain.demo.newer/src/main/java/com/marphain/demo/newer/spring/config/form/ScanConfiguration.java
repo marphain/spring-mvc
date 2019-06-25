@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * 扫描基于注解@Component、@Controller、@Service等创建bean
  */
 @Configuration
-@ComponentScan(basePackages = "com.marphain.demo.newer.spring.bean")
+@ComponentScan(basePackages = "com.marphain.demo.newer.spring")
 public class ScanConfiguration {
 
 }
