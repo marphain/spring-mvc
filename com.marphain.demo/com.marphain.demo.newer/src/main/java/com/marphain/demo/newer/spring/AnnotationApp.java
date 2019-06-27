@@ -26,8 +26,8 @@ public class AnnotationApp {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(ContextConfiguration.class);
 
 
-//        UserBean userBean1 = ctx.getBean("userBean", UserBean.class);
-//        System.out.println(userBean1 + userBean1.getName());
+        UserBean userBean1 = ctx.getBean("userBean", UserBean.class);
+        System.out.println(userBean1 + userBean1.getName());
 //
 //        UserBean userBean2 = ctx.getBean("userBean", UserBean.class);
 //        System.out.println(userBean2 + userBean2.getName());

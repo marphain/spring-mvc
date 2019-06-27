@@ -13,7 +13,7 @@ import java.beans.PropertyDescriptor;
 //@Component
 public class MyInstantiationAwareBeanPostProcessor implements InstantiationAwareBeanPostProcessor {
     /**
-     * 实例化前调用
+     * 实例化(调用构造函数)前调用
      * @param aClass
      * @param s
      * @return

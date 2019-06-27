@@ -1,10 +1,12 @@
 package com.marphain.demo.newer.spring.bean;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.jws.soap.SOAPBinding;
 
 /**
  * 通过自动扫描@ComponentScan创建bean，使用注解@PostConstruct、@PreDestroy管理生命周期
@@ -17,8 +19,15 @@ public class PigBean {
     @Value("short")
     private String tail;
 
+    @Autowired
+    private UserBean userBean;
+
     public PigBean(){
         System.out.println("PigBean()构造方法。。。");
+    }
+
+    public PigBean(UserBean userBean){
+        this.userBean = userBean;
     }
 
     public String getHead() {

@@ -1,12 +1,17 @@
 package com.marphain.demo.newer.spring.bean;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  * 通过配置注解@Bean创建bean，并管理生命周期
  */
 public class UserBean {
     private String name;
 
-    private  int age;
+    private int age;
+
+    @Autowired
+    private PigBean pigBean;
 
     public int getAge() {
         return age;
@@ -16,8 +21,12 @@ public class UserBean {
         this.age = age;
     }
 
-    public UserBean(){
+    public UserBean() {
         System.out.println("UserBean()构造方法。。。");
+    }
+
+    public UserBean(PigBean pigBean) {
+        this.pigBean = pigBean;
     }
 
     public String getName() {
@@ -29,11 +38,19 @@ public class UserBean {
         this.name = name;
     }
 
-    public void init(){
+    public PigBean getPigBean() {
+        return pigBean;
+    }
+
+    public void setPigBean(PigBean pigBean) {
+        this.pigBean = pigBean;
+    }
+
+    public void init() {
         System.out.println("init方法。。。");
     }
 
-    public void destroy(){
+    public void destroy() {
         System.out.println("destory方法。。。");
     }
 }
