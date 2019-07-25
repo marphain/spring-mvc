@@ -1,6 +1,6 @@
 package com.marphain.demo.newer.ws.config;
 
-import com.marphain.demo.newer.ws.service.impl.TestService;
+import com.marphain.demo.newer.ws.service.TestService;
 import com.marphain.demo.newer.ws.service.impl.TestServiceImpl;
 import com.netfinworks.invest.facade.InvestQueryFacade;
 import org.springframework.context.annotation.Bean;

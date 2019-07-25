@@ -2,6 +2,7 @@ package com.marphain.demo.newer.spring.bean;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -11,6 +12,7 @@ import javax.jws.soap.SOAPBinding;
 /**
  * 通过自动扫描@ComponentScan创建bean，使用注解@PostConstruct、@PreDestroy管理生命周期
  */
+@Lazy//懒加载，默认为预加载
 @Component
 public class PigBean {
     @Value("fat")
